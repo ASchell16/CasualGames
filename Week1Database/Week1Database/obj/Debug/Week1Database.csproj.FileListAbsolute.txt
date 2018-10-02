@@ -1,0 +1,12 @@
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\bin\Debug\Week1Database.exe.config
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\bin\Debug\Week1Database.exe
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\bin\Debug\Week1Database.pdb
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\bin\Debug\EntityFramework.dll
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\bin\Debug\EntityFramework.xml
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\obj\Debug\Week1Database.csprojAssemblyReference.cache
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\obj\Debug\Week1Database.csproj.CoreCompileInputs.cache
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\obj\Debug\Week1Database.csproj.CopyComplete
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\obj\Debug\Week1Database.exe
+C:\Users\s00190272\Documents\Entity Framework Sample Console Application\Week1Database\Week1Database\obj\Debug\Week1Database.pdb
