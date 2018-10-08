@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameShopAPI", "GameShopAPI\GameShopAPI.csproj", "{2449C74C-0A67-4A04-9EB7-3BE7F2AC62FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{3204EF8F-C636-447C-A8CA-7E17991DB69B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{C4586A3A-140B-476C-ACA8-1D30F1E78CB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2449C74C-0A67-4A04-9EB7-3BE7F2AC62FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2449C74C-0A67-4A04-9EB7-3BE7F2AC62FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2449C74C-0A67-4A04-9EB7-3BE7F2AC62FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2449C74C-0A67-4A04-9EB7-3BE7F2AC62FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3204EF8F-C636-447C-A8CA-7E17991DB69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3204EF8F-C636-447C-A8CA-7E17991DB69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3204EF8F-C636-447C-A8CA-7E17991DB69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3204EF8F-C636-447C-A8CA-7E17991DB69B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4586A3A-140B-476C-ACA8-1D30F1E78CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4586A3A-140B-476C-ACA8-1D30F1E78CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4586A3A-140B-476C-ACA8-1D30F1E78CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4586A3A-140B-476C-ACA8-1D30F1E78CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C0548EF-963B-4845-AFD9-25A5F3458380}
+	EndGlobalSection
+EndGlobal

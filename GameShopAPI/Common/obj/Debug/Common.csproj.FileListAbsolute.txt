@@ -1,0 +1,14 @@
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\bin\Debug\Common.dll.config
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\bin\Debug\Common.dll
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\bin\Debug\Common.pdb
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\bin\Debug\EntityFramework.dll
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\bin\Debug\EntityFramework.xml
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\obj\Debug\Common.csproj.CopyComplete
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\obj\Debug\Common.dll
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\Common\obj\Debug\Common.pdb

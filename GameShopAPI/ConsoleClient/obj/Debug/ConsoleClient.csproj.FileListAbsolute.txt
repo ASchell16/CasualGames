@@ -1,0 +1,15 @@
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\bin\Debug\ConsoleClient.exe.config
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\bin\Debug\ConsoleClient.exe
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\bin\Debug\ConsoleClient.pdb
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\bin\Debug\Common.dll
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\bin\Debug\EntityFramework.dll
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\bin\Debug\Common.pdb
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\bin\Debug\Common.dll.config
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\bin\Debug\EntityFramework.xml
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\obj\Debug\ConsoleClient.csprojAssemblyReference.cache
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\obj\Debug\ConsoleClient.csproj.CoreCompileInputs.cache
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\obj\Debug\ConsoleClient.csproj.CopyComplete
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\obj\Debug\ConsoleClient.exe
+C:\Users\s00190272\Documents\GitHub\CasualGames\GameShopAPI\ConsoleClient\obj\Debug\ConsoleClient.pdb
