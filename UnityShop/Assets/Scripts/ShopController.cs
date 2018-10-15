@@ -13,10 +13,7 @@ public class ShopController : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < 20; i++)
-        {
-            shopItems.Add(new Models() { ID = i, Name = "Item " + i });
-        }
+        shopItems = ApiHelper.GetShopItems();
         Populate();
     }
 
@@ -36,7 +33,7 @@ public class ShopController : MonoBehaviour
         var children = GetComponentsInChildren<ItemButtonController>();
 
         foreach (var button in children)
-            Destroy(button.gameObject);
+            Destroy(button);
     }
 
     public void OnItemSelected(int id)
@@ -44,15 +41,15 @@ public class ShopController : MonoBehaviour
         Models selectedItem = shopItems.Find(i => i.ID == id);
         Debug.Log(selectedItem.Name + " : " + selectedItem.Cost);
     }
-    public void Show()
-    {
-        shopButtonTemplate.SetActive(true);
-    }
+    //public void Show()
+    //{
+    //    shopButtonTemplate.SetActive(true);
+    //}
 
-    public void Hide()
-    {
-        shopButtonTemplate.SetActive(false);
-    }
+    //public void Hide()
+    //{
+    //    shopButtonTemplate.SetActive(false);
+    //}
 
 }
 

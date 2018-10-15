@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+[Serializable]
 public enum ItemCategory
     {
          Health,
          Stamina,
          Magic
     }
-public class Models // possibly Item
+[Serializable]
+public class Models
 {
     public int ID;
     public double Cost;
