@@ -10,6 +10,8 @@ public class ShopController : MonoBehaviour
     public List<Models> shopItems = new List<Models>();
     public GameObject shopButtonTemplate;
     public GameObject contentPanel;
+    public GameObject ListBox;
+
 
     void Start()
     {
@@ -41,15 +43,17 @@ public class ShopController : MonoBehaviour
         Models selectedItem = shopItems.Find(i => i.ID == id);
         Debug.Log(selectedItem.Name + " : " + selectedItem.Cost);
     }
-    //public void Show()
-    //{
-    //    shopButtonTemplate.SetActive(true);
-    //}
+    public void show()
+    {
+        shopButtonTemplate.gameObject.SetActive(true);
+        Debug.Log("Pressed Show");
+    }
 
-    //public void Hide()
-    //{
-    //    shopButtonTemplate.SetActive(false);
-    //}
+    public void hide()
+    {
+        shopButtonTemplate.SetActive(false);
+        Debug.Log("Pressed Hide");
+    }
 
 }
 

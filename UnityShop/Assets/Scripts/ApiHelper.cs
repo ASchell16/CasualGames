@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using UnityEngine;
+using System.IO;
 
 public class ListWrapper<T>
 {
@@ -31,6 +32,8 @@ public class ApiHelper
         string json = GetjsonFromApi(ItemsController);
         json = ConvertJsonArrayToWrapperString(json);
 
+        FileHelper.SaveJsonToDisk("shop_items.json", json);
+
         return JsonUtility.FromJson<ListWrapper<Models>>(json).items;
     }
     private static string ConvertJsonArrayToWrapperString(string json)
@@ -55,5 +58,17 @@ public class ApiHelper
     }
 
 
+}
+public class FileHelper
+{
+    public static void SaveJsonToDisk(string filename, string json)
+    {
+        File.WriteAllText(Application.persistentDataPath + "\\" + filename, json);
+    }
+
+    public static void LoadJsonFromDisk(string filename)
+    {
+        File.ReadAllText(Application.persistentDataPath + "\\" + filename);
+    }
 }
 
