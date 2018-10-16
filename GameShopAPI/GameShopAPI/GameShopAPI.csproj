@@ -188,6 +188,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\VendorItemsController.cs" />
+    <Compile Include="Controllers\VendorsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

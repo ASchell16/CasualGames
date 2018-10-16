@@ -52,10 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CSWeek3_1Context.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayerItems.cs" />
+    <Compile Include="Models\Vendor.cs" />
+    <Compile Include="Models\VendorItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

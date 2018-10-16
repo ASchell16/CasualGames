@@ -1,5 +1,6 @@
 namespace GameShopAPI.Migrations
 {
+    using Common.Models;
     using CSWeek3._1.Models;
     using System;
     using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace GameShopAPI.Migrations
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(GameShopAPI.Models.GameShopAPIContext context)
+        protected override void Seed(Models.GameShopAPIContext context)
         {
             var items = new List<Item>
             {
@@ -39,6 +40,7 @@ namespace GameShopAPI.Migrations
             {
                 context.Items.AddOrUpdate(x => x.Name, item);
             }
+
         }
     }
 }

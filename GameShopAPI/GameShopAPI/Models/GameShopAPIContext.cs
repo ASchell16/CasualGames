@@ -20,5 +20,9 @@ namespace GameShopAPI.Models
         }
 
         public System.Data.Entity.DbSet<CSWeek3._1.Models.Item> Items { get; set; }
+
+        public System.Data.Entity.DbSet<Common.Models.Vendor> Vendors { get; set; }
+
+        public System.Data.Entity.DbSet<Common.Models.VendorItem> VendorItems { get; set; }
     }
 }
