@@ -8,6 +8,7 @@ public class ActivityText : MonoBehaviour {
     // left message [Sprite] right message
     public Text leftText;
     public Text rightText;
+    public Image image;
 
 	// Use this for initialization
 	void RemoveText () {
@@ -15,12 +16,13 @@ public class ActivityText : MonoBehaviour {
 	}
 
     // Update is called once per frame
-    void InitText(string leftMessage, string rightMessage, float lifeTime, Color color)
+    public void InitText(string leftMessage, string rightMessage, Image uImage,  Color color, float lifeTime)
     {
         leftText.text = leftMessage;
         leftText.color = color;
         rightText.text = rightMessage;
         rightText.color = color;
+        image = uImage;
 
         Invoke("RemoveText", lifeTime);
 
