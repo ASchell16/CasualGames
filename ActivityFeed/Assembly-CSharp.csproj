@@ -61,6 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AchieveController.cs" />
+    <Compile Include="Assets\Scripts\AchievementClass.cs" />
+    <Compile Include="Assets\Scripts\AchievementManager.cs" />
     <Compile Include="Assets\Scripts\ActivityFeed.cs" />
     <Compile Include="Assets\Scripts\ActivityText.cs" />
     <Reference Include="UnityEditor.StandardEvents">
