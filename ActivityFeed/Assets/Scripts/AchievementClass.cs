@@ -7,13 +7,22 @@ using UnityEngine.UI;
 [Serializable]
 public class AchievementClass
 {
-    public int ID { get; set; }
-    public string achieveName { get; set; }
-    public string achieveDes { get; set; }
-    public int rGXP { get; set; }
-    public int rCurr { get; set; }
-    public string Image { get; set; }
-    public bool isSecret { get; set; }
-    public bool isComplete { get; set; }
+    public int ID;
+    public string achieveName;
+    public string achieveDes;
+    public int rGXP;
+    public int rCurr;
+    public string Image;
+    public bool isSecre;
+    public bool isComplete;
+    public string ActionName; // name of method to check achievement
+    public Action<AchievementClass> Action; 
            
+}
+[Serializable]
+public class AchievementData
+{
+    public int jumps;
+    public float distanceTravelled;
+    public int Healing;
 }

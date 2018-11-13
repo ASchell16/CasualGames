@@ -24,7 +24,7 @@ public class AchieveController : MonoBehaviour {
         achievement = Data;
         TxtName.text = Data.achieveName;
 
-        image.sprite = Resources.Load<Sprite>("UI/UISprites/" + Data.Image);
+        image.sprite = Resources.Load<Sprite>("AchievementSprites/" + Data.Image);
     }
 
     private void RemoveAchieve()

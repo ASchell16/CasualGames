@@ -62,10 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AchieveController.cs" />
+    <Compile Include="Assets\Scripts\AchievementActions.cs" />
     <Compile Include="Assets\Scripts\AchievementClass.cs" />
     <Compile Include="Assets\Scripts\AchievementManager.cs" />
     <Compile Include="Assets\Scripts\ActivityFeed.cs" />
     <Compile Include="Assets\Scripts\ActivityText.cs" />
+    <Compile Include="Assets\Scripts\FileHelper.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/s00190272/Documents/GitHub/CasualGames/ActivityFeed/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
