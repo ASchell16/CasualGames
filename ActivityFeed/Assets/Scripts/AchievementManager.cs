@@ -20,6 +20,7 @@ public class AchievementManager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Method Working");
         audio = GetComponent<AudioSource>();
 
         if (!FileHelper.DoesAchievementDataExist())
@@ -43,6 +44,7 @@ public class AchievementManager : MonoBehaviour
 
     private void Player_OnJump()
     {
+       
         Data.jumps++;
     }
 
