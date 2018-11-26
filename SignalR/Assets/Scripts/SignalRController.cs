@@ -17,8 +17,7 @@ public class SignalRController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        //Connect to server
-        // Join Chat
+        DontDestroyOnLoad(this);
         ConnectToHub();
 
     }
@@ -28,11 +27,7 @@ public class SignalRController : MonoBehaviour {
         isConnected = false;
     }
 
-    // Update is called once per frame
-    void Update ()
-    {
-        
-    }  
+    
     
     public void ConnectToHub()
     {
@@ -42,13 +37,12 @@ public class SignalRController : MonoBehaviour {
             proxy = connection.CreateHubProxy(hubName);
             // connect to the player joined Hub and run the player joined method
             proxy.On("PlayerJoined", new Action<string>(PlayerJoined));
-
             proxy.On("RecieveMessage", new Action<string, string>(MessageRecieved));
             proxy.On("PlayerLeft", new Action<string>(PlayerLeft));
 
             connection.Start().Wait();// Waits For task to complete
             isConnected = true;
-            Debug.Log("Connected");
+            
         }
     }
 

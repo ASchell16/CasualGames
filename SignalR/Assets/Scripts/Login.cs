@@ -8,7 +8,7 @@ public class Login : MonoBehaviour {
 
 
     public SignalRController signal;
-    Text loginText;
+    
 	// Use this for initialization
 	void Start ()
     {
@@ -16,13 +16,11 @@ public class Login : MonoBehaviour {
 	}
 
     public void OnInput(string Username)
-    {     
-
-        string Usersname = signal.usersName;
-        //loginText.text = Username;
-        if (Username == Usersname)
+    {
+        string user = signal.usersName;
+        
+        if (Username == user)
         {
-            Debug.Log("Input Recieved");
             signal.JoinChat(Username);
             SceneManager.LoadScene(1);
         }

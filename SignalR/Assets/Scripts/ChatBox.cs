@@ -5,21 +5,19 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ChatBox : MonoBehaviour {
-
-    string Message;
+    public GameObject content;
+    public GameObject txtMessage;
+    
 	void Start ()
     {
         
-	}
+
+    }
 	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
     public void OnInput(string message)
     {
-        Message = message;
-        Console.WriteLine(Message);
+        txtMessage.GetComponent<Text>().text = message;
+        Instantiate(txtMessage, content.transform);
+        Console.WriteLine(message);
     }
 }
