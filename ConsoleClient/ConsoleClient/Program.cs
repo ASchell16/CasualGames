@@ -10,7 +10,7 @@ namespace ConsoleClient
     class Program
     {
         static string endpoint = "http://localhost:2490/";
-        static string hubName = "TestHub";
+        static string hubName = "ChatHub";
         static string usersName;
         static HubConnection connection;
         static IHubProxy proxy;
@@ -35,7 +35,7 @@ namespace ConsoleClient
                 }
                 else
                 {
-                    proxy.Invoke("TestMessage", usersName, message);
+                    proxy.Invoke("SendMessage", usersName, message);
                 }
             }
 
