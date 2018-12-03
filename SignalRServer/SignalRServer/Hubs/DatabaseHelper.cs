@@ -44,5 +44,7 @@ namespace SignalRServer.Hubs
                 throw new Exception("No Message");
             }
         }
+
+		
     }
 }

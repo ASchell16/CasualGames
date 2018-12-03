@@ -8,8 +8,9 @@ public class SignalRController : MonoBehaviour {
 
     public string endpoint = "http://localhost:2490/";
     public string hubName = "ChatHub";
-    public string usersName = "Alex";
-    bool isConnected = false;
+    public string usersName;
+	public string enteredUser;
+    public bool isConnected = false;
     HubConnection connection;
     IHubProxy proxy;
     public ChatBox chat;
@@ -18,11 +19,12 @@ public class SignalRController : MonoBehaviour {
 	void Start ()
     {
         DontDestroyOnLoad(this);
+		
         ConnectToHub();
 
     }
 
-    void OnApplicationQuit()
+    public void OnApplicationQuit()
     {
         isConnected = false;
     }
@@ -33,15 +35,16 @@ public class SignalRController : MonoBehaviour {
     {
         if (!string.IsNullOrEmpty(endpoint) && !string.IsNullOrEmpty(hubName))
         {
+			
             connection = new HubConnection(endpoint);
             proxy = connection.CreateHubProxy(hubName);
             // connect to the player joined Hub and run the player joined method
             proxy.On("PlayerJoined", new Action<string>(PlayerJoined));
-            proxy.On("RecieveMessage", new Action<string, string>(MessageRecieved));
+            proxy.On("RecieveMessage", new Action<string, string>(RecieveMessage));
             proxy.On("PlayerLeft", new Action<string>(PlayerLeft));
-
+			
             connection.Start().Wait();// Waits For task to complete
-            isConnected = true;
+     
             
         }
     }
@@ -50,38 +53,46 @@ public class SignalRController : MonoBehaviour {
     {
         if (isConnected)
         {
-            proxy.Invoke("Join", username);
-        }
+			usersName = username;
+			
+			proxy.Invoke("Join", username);		
+			PlayerJoined(username);
+		}
     }
 
     public void LeftChat()
     {
         if (!isConnected)
         {
+			
             proxy.Invoke("Leave", usersName);
+			PlayerLeft(usersName);
+			
         }
     }
 
-    public void onSendMessage(string message)
+    public void OnSendMessage(string message)
     {
         if (isConnected)
         {
             proxy.Invoke("SendMessageToOthers", usersName, message);
-        }
+			RecieveMessage(usersName, message);
+
+		}
     }
 
 
     public void PlayerJoined(string username)
     {
-        Debug.Log(username + "Has Joined");
+		chat.OnPlayerJoined(username);
     }
 
     public void PlayerLeft(string username)
     {
-        Debug.Log(username + "Has Left");
+		chat.PlayerLeft(username);
     }
-    public void MessageRecieved(string username, string message)
+    public void RecieveMessage(string username, string message)
     {
-        Debug.Log(username + "Has Said" + message);
+		chat.RecievedMessage(username, message);
     }
 }

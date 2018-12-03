@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,21 +9,17 @@ public class Login : MonoBehaviour {
 
 
     public SignalRController signal;
-    
-	// Use this for initialization
-	void Start ()
-    {
-        
-	}
+	public Button btnJoin;
+	public InputField userInput;
+	public string Username;
+   
 
-    public void OnInput(string Username)
+    public void OnInput()
     {
-        string user = signal.usersName;
-        
-        if (Username == user)
-        {
-            signal.JoinChat(Username);
-            SceneManager.LoadScene(1);
-        }
+       
+		Username = userInput.text.ToString();
+		signal.isConnected = true;
+        signal.JoinChat(Username);
+
     }
 }

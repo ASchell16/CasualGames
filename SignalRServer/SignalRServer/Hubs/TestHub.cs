@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
+using SignalRServer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,7 @@ namespace SignalRServer.Hubs
         }
         public void Join(string user)
         {
+			
             if (DatabaseHelper.FindPlayer(user) != null)
                 Clients.Others().PlayerJoined(user);
         }
@@ -42,6 +44,6 @@ namespace SignalRServer.Hubs
             if (DatabaseHelper.FindPlayer(user) != null)
                 Clients.Others().PlayerLeft(user);
         }
-     
+		
     }
 }
