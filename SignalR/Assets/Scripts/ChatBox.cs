@@ -5,35 +5,46 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ChatBox : MonoBehaviour {
+	public List<string> listMessage = new List<string>();
     public GameObject content;
     public GameObject txtMessage;
 	public InputField input;
 	public SignalRController signal;
 	Leave leave;
-
+	public string txt;
+	
+	void Update()
+	{		
+		foreach (var m in listMessage)
+		{
+					
+			AddMessage(m);
+		}
+		listMessage.Clear();
+	}
 	public void SendMessage()
 	{
-		string txt = input.text;
-		signal.OnSendMessage(txt);
-		
+		signal.OnSendMessage(input.text);		
 	}
+	public void AddMessage(string m)
+	{
+		txtMessage.GetComponent<Text>().text = m;
+		Instantiate(txtMessage, content.transform);
+	}
+
 	public void OnPlayerJoined(string username)
 	{
-		txtMessage.GetComponent<Text>().text = username + " Has Joined!";
-		Instantiate(txtMessage, content.transform);
+		listMessage.Add(username + " Has Joined!");		
 	}  
 
 	public void RecievedMessage(string username, string message)
 	{
-		txtMessage.GetComponent<Text>().text = username + " Has Said " + message;
-		Instantiate(txtMessage, content.transform);
+		listMessage.Add(username + " Has Said " + message);
 	}
 
 	public void PlayerLeft(string username)
 	{
-		txtMessage.GetComponent<Text>().text = username + " Has Left";
-		Instantiate(txtMessage, content.transform);
-		leave.Left();
+		listMessage.Add(username + " Has Left!"); 
 	}
 	
 }

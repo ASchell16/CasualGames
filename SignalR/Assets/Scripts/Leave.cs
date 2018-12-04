@@ -9,13 +9,12 @@ public class Leave : MonoBehaviour
 	{
 		if (signal.isConnected)
 		{
-			signal.OnApplicationQuit();
-			signal.LeftChat();
+			signal.LeftChat();			
 		}
 		
 	}
 	public void Left()
 	{
-		Application.Quit();
+		signal.OnApplicationQuit();
 	}
 }

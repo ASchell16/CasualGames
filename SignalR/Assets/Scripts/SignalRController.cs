@@ -4,8 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SignalRController : MonoBehaviour {
 
+public class SignalRController : MonoBehaviour
+{	
     public string endpoint = "http://localhost:2490/";
     public string hubName = "ChatHub";
     public string usersName;
@@ -26,7 +27,7 @@ public class SignalRController : MonoBehaviour {
 
     public void OnApplicationQuit()
     {
-        isConnected = false;
+		connection.Stop();
     }
 
     
@@ -39,10 +40,11 @@ public class SignalRController : MonoBehaviour {
             connection = new HubConnection(endpoint);
             proxy = connection.CreateHubProxy(hubName);
             // connect to the player joined Hub and run the player joined method
-            proxy.On("PlayerJoined", new Action<string>(PlayerJoined));
+            proxy.On("PlayerJoined", new Action<string>(OnPlayerJoined));
             proxy.On("RecieveMessage", new Action<string, string>(RecieveMessage));
             proxy.On("PlayerLeft", new Action<string>(PlayerLeft));
-			
+			isConnected = true;
+
             connection.Start().Wait();// Waits For task to complete
      
             
@@ -52,22 +54,18 @@ public class SignalRController : MonoBehaviour {
     public void JoinChat(string username)
     {
         if (isConnected)
-        {
-			usersName = username;
-			
-			proxy.Invoke("Join", username);		
-			PlayerJoined(username);
+        {		
+			proxy.Invoke("Join", username);
+			chat.OnPlayerJoined(username);
 		}
     }
 
     public void LeftChat()
     {
         if (!isConnected)
-        {
-			
+        {			
             proxy.Invoke("Leave", usersName);
-			PlayerLeft(usersName);
-			
+			PlayerLeft(usersName);			
         }
     }
 
@@ -76,16 +74,16 @@ public class SignalRController : MonoBehaviour {
         if (isConnected)
         {
             proxy.Invoke("SendMessageToOthers", usersName, message);
-			RecieveMessage(usersName, message);
+			//RecieveMessage(usersName, message);
 
 		}
     }
 
-
-    public void PlayerJoined(string username)
-    {
-		chat.OnPlayerJoined(username);
-    }
+	public void OnPlayerJoined(string user)
+	{
+		chat.OnPlayerJoined(user);
+		//Debug.Log("OnplayerJoined");
+	}    
 
     public void PlayerLeft(string username)
     {

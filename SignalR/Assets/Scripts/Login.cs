@@ -15,11 +15,8 @@ public class Login : MonoBehaviour {
    
 
     public void OnInput()
-    {
-       
-		Username = userInput.text.ToString();
-		signal.isConnected = true;
-        signal.JoinChat(Username);
-
+	{ 
+			signal.JoinChat(userInput.text);
+		
     }
 }

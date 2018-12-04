@@ -16,33 +16,33 @@ namespace SignalRServer.Hubs
     {
         public void SendMessage(string sender, string message)
         {
-            if(DatabaseHelper.FindPlayer(sender) != null)
-            {   Clients.All.RecieveMessage(sender, message);
+            //if(DatabaseHelper.FindPlayer(sender) != null)
+            //{
+				Clients.All.RecieveMessage(sender, message);
 
-                DatabaseHelper.AddPlayerMessage(new Models.PlayerMessage()
-                {
-                    Username = sender,
-                    MessageSent = message,
-                    DateSent = DateTime.UtcNow,
-                });
-            }
+                //DatabaseHelper.AddPlayerMessage(new Models.PlayerMessage()
+                //{
+                 //   Username = sender,
+                  //  MessageSent = message,
+                   // DateSent = DateTime.UtcNow,
+                //});
+            //}
         }
         public void SendMessageToOthers(string sender, string message)
         {
-            if(DatabaseHelper.FindPlayer(sender) != null)
-                Clients.Others.RecieveMessage(sender, message);
+           // if(DatabaseHelper.FindPlayer(sender) != null)
+                Clients.All.RecieveMessage(sender, message);
         }
         public void Join(string user)
-        {
-			
-            if (DatabaseHelper.FindPlayer(user) != null)
-                Clients.Others().PlayerJoined(user);
+        {			
+           //if (DatabaseHelper.FindPlayer(user) != null)
+                Clients.Others.PlayerJoined(user);
         }
 
         public void Leave(string user)
         {
-            if (DatabaseHelper.FindPlayer(user) != null)
-                Clients.Others().PlayerLeft(user);
+           // if (DatabaseHelper.FindPlayer(user) != null)
+                Clients.Others.PlayerLeft(user);
         }
 		
     }
